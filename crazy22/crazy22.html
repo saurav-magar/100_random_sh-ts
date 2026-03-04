@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevBoard</title>
+    <link rel="stylesheet" href="crazy22.css">
+</head>
+<body>
+
+<header>
+    <h1>DevBoard</h1>
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search tasks...">
+        <button id="themeToggle">🌙</button>
+    </div>
+</header>
+
+<section class="task-form">
+    <input type="text" id="taskTitle" placeholder="Task title">
+    <select id="taskPriority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+    </select>
+    <input type="date" id="taskDate">
+    <button id="addTaskBtn">Add Task</button>
+</section>
+
+<section class="board">
+    <div class="column" data-status="todo">
+        <h2>To Do</h2>
+        <div class="task-container" id="todo"></div>
+    </div>
+</section>
+
+<script src="crazy22.js"></script>
+</body>
+</html>

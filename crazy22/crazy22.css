@@ -1,0 +1,179 @@
+:root {
+    /* Light theme defaults */
+    --bg: #f4f6f9;
+    --card: #ffffff;
+    --text: #222;
+    --primary: #4a90e2;
+    --shadow-light: #ffffff;
+    --shadow-dark: #d1d9e6;
+}
+
+body.dark {
+    /* Dark theme overrides */
+    --bg: #121212;
+    --card: #1e1e1e;
+    --text: #e0e0e0;
+    --primary: #4a90e2;
+    --shadow-light: #2a2a2a;
+    --shadow-dark: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: var(--primary);
+    color: white;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Controls */
+.controls input, .controls button {
+    border: none;
+    border-radius: 12px;
+    padding: 10px 14px;
+    background: var(--card);
+    color: var(--text);
+    box-shadow: 6px 6px 12px var(--shadow-dark);
+    transition: 0.2s;
+}
+
+.controls button:hover {
+    transform: scale(1.05);
+}
+
+.task {
+    display: grid;
+    margin: 60px;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    gap: 8px;                       /* spacing between columns */
+    align-items: center;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 6px 6px 12px var(--shadow-dark),
+                -6px -6px 12px var(--shadow-light);
+}
+
+/* Ensure each element aligns nicely */
+.task strong {
+    grid-column: 1; /* first column */
+}
+
+.task .priority {
+    grid-column: 2; /* second column */
+    justify-self: end; /* push to right */
+}
+
+.task small {
+    grid-column: 1; /* first column */
+    font-size: 12px;
+    color: var(--text);
+}
+
+.task .delete-btn {
+    grid-column: 2; /* second column */
+    justify-self: end;
+    background: crimson;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* Task Form */
+.task-form {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.task-form input,
+.task-form select,
+.task-form button {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 12px;
+    border: none;
+    background: var(--card);
+    color: var(--text);
+    box-shadow: inset 4px 4px 8px var(--shadow-dark),
+                inset -4px -4px 8px var(--shadow-light);
+}
+
+.addTaskbtn{
+    background: rgb(56, 160, 56);
+}
+.task-form button {
+    background: rgb(56, 160, 56);
+    color: white;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Board & Columns */
+.board {
+    display: flex;
+    gap: 20px;
+    padding: 5% 10%;
+}
+
+.column {
+    flex: 1;
+    background: var(--card);
+    padding: 20px;
+    border-radius: 20px;
+    min-height: 400px;
+    box-shadow: 8px 8px 16px var(--shadow-dark),
+                -8px -8px 16px var(--shadow-light);
+    backdrop-filter: blur(10px);
+}
+
+.column h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.low { background: #4caf50; }
+.medium { background: #ff9800; }
+.high { background: #f44336; }
+
+/* Delete Button */
+.delete-btn {
+    margin-top: 8px;
+    background: crimson;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+.delete-btn:hover {
+    background: #b71c1c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .board {
+        flex-direction: column;
+    }
+}
