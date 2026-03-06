@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Allocation Simulator</title>
+    <link rel="stylesheet" href="crazy24.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="panel">
+
+            <h2>Memory Allocation Simulator</h2>
+
+            <label>Memory Block Size (KB)</label>
+            <input type="number" id="blockSize">
+
+            <button onclick="addBlock()">Add Memory Block</button>
+
+            <label>Process Size (KB)</label>
+            <input type="number" id="processSize">
+
+            <button onclick="addProcess()">Add Process</button>
+
+            <label>Algorithm</label>
+            <select id="algorithm">
+                <option value="first">First Fit</option>
+                <option value="best">Best Fit</option>
+                <option value="worst">Worst Fit</option>
+            </select>
+
+            <button onclick="allocateMemory()">Allocate Memory</button>
+
+            <button class="reset" onclick="resetSystem()">Reset</button>
+
+            <div class="stats">
+                <h3>Stats</h3>
+                <p id="internalFrag">Internal Fragmentation: 0 KB</p>
+            </div>
+
+        </div>
+
+        <div class="visual-section">
+
+            <div class="memory-area" id="memoryArea"></div>
+
+            <div class="queue">
+                <h3>Process Queue</h3>
+                <div id="processQueue"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="crazy24.js"></script>
+
+</body>
+
+</html>
