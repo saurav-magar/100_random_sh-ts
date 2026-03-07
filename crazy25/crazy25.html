@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CPU Scheduling Simulator</title>
+    <link rel="stylesheet" href="crazy25.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="controls">
+
+            <h2>CPU Scheduling Simulator</h2>
+
+            <label>Process Name</label>
+            <input type="text" id="processName">
+
+            <label>Burst Time</label>
+            <input type="number" id="burstTime">
+
+            <button onclick="addProcess()">Add Process</button>
+
+            <label>Algorithm</label>
+            <select id="algorithm">
+                <option value="fcfs">FCFS</option>
+                <option value="sjf">SJF</option>
+                <option value="rr">Round Robin</option>
+            </select>
+
+            <label id="quantumLabel">Time Quantum (RR)</label>
+            <input type="number" id="quantum" value="2">
+
+            <button onclick="runSimulation()">Run Simulation</button>
+
+            <button class="reset" onclick="resetAll()">Reset</button>
+
+        </div>
+
+        <div class="visual">
+
+            <h3>Process Queue</h3>
+            <div id="processQueue" class="queue"></div>
+
+            <h3>Gantt Chart</h3>
+            <div id="ganttChart" class="gantt"></div>
+
+            <div class="stats">
+                <p id="avgWaiting"></p>
+                <p id="avgTurnaround"></p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="crazy25.js"></script>
+
+</body>
+
+</html>
