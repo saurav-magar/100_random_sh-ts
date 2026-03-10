@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching Algorithm Visualizer</title>
+    <link rel="stylesheet" href="crazy28.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Searching Algorithm Visualizer</h1>
+
+        <div class="controls">
+
+            <label>Array Size</label>
+            <input type="number" id="size" value="15" min="5" max="50">
+
+            <label>Search Value</label>
+            <input type="number" id="searchValue">
+
+            <label>Algorithm</label>
+            <select id="algorithm">
+                <option value="linear">Linear Search</option>
+                <option value="binary">Binary Search</option>
+            </select>
+
+            <label>Speed</label>
+            <input type="range" id="speed" min="100" max="1000" value="400">
+
+            <div class="buttons">
+                <button onclick="generateArray()">Generate Array</button>
+                <button onclick="startSearch()">Start Search</button>
+                <button onclick="reset()">Reset</button>
+            </div>
+
+        </div>
+
+        <div id="arrayContainer"></div>
+
+        <div class="info">
+            <p id="status">Status: Ready</p>
+            <p id="comparisons">Comparisons: 0</p>
+        </div>
+
+    </div>
+
+    <script src="crazy28.js"></script>
+</body>
+
+</html>
