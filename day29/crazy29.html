@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Visualizer</title>
+    <link rel="stylesheet" href="crazy29.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Array Visualizer</h1>
+
+        <div class="controls">
+
+            <input type="number" id="valueInput" placeholder="Enter value">
+
+            <input type="number" id="indexInput" placeholder="Index (Only for update, delete)">
+            <div class="button_container">
+                <button onclick="insertValue()">Insert</button>
+                <button onclick="deleteValue()">Delete</button>
+                <button onclick="updateValue()">Update</button>
+                <button onclick="searchValue()">Search</button>
+                <button onclick="resetArray()">Reset</button>
+            </div>
+
+        </div>
+
+        <div id="arrayContainer"></div>
+
+        <p id="status">Status: Ready</p>
+
+    </div>
+
+    <script src="crazy29.js"></script>
+</body>
+
+</html>
