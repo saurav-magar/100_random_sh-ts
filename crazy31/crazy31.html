@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Visualizer</title>
+    <link rel="stylesheet" href="crazy31.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Stack Data Structure (LIFO)</h1>
+
+        <div class="controls">
+
+            <input type="number" id="valueInput" placeholder="Enter value">
+
+            <div class="button_collection">
+                <button onclick="push()">Push</button>
+                <button onclick="pop()">Pop</button>
+                <button onclick="peek()">Peek</button>
+                <button onclick="clearStack()">Clear</button>
+            </div>
+
+        </div>
+
+        <div id="listContainer"></div>
+
+        <p id="status">Stack is empty</p>
+
+    </div>
+
+    <script src="crazy31.js"></script>
+
+</body>
+
+</html>
