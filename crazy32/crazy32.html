@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Queue Visualizer</title>
+<link rel="stylesheet" href="crazy32.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Queue Data Structure (FIFO)</h1>
+
+  <div class="controls">
+      <input type="number" id="valueInput" placeholder="Enter value">
+      <button onclick="enqueue()">Enqueue</button>
+      <button onclick="dequeue()">Dequeue</button>
+      <button onclick="peek()">Peek</button>
+      <button onclick="clearQueue()">Clear</button>
+  </div>
+
+  <p id="message"></p>
+
+  <div class="queue-container">
+      <div id="queue" class="queue"></div>
+  </div>
+</div>
+
+<script src="crazy32.js"></script>
+</body>
+</html>
